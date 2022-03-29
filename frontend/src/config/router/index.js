@@ -1,6 +1,7 @@
 import { Switch } from 'react-router-dom'
 
 import Home from '../../pages/Home'
+import Error404 from '../../pages/Error/404'
 import FancyRoute from './fancy'
 
 const routes = [
@@ -9,6 +10,11 @@ const routes = [
         path: '/',
         exact: true,
         component: Home
+    },
+    {
+        title: 'Halaman Tidak Ditemukan',
+        path: '*',
+        component: Error404
     },
 ]
 
