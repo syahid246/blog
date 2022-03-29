@@ -1,6 +1,7 @@
-import Navbar from "./components/Navbar";
+import Navbar from '../components/Navbar'
 
-function App() {
+function Home()
+{
     return <>
         <Navbar className="border-b border-gray-500" />
         <div className="text-center mt-4">
@@ -10,4 +11,4 @@ function App() {
     </>
 }
 
-export default App;
+export default Home
