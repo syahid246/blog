@@ -14,7 +14,7 @@ const routes = [
     },
     {
         title: 'Penulis',
-        path: '/',
+        path: '/penulis',
         component: Penulis
     },
     {
