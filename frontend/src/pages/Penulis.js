@@ -1,10 +1,10 @@
 import Navbar from '../components/Navbar'
 
-function Penulis()
+function Penulis(props)
 {
     return <>
         <div className="sticky top-0 w-full">
-            <Navbar className="border-b border-gray-500" />
+            <Navbar {...props} className="border-b border-gray-500" />
         </div>
         <div className="px-4 mt-4">
             <h2 className="text-4xl font-medium mb-3">Penulis</h2>

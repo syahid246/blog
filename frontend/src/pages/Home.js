@@ -1,10 +1,10 @@
 import Navbar from '../components/Navbar'
 
-function Home()
+function Home(props)
 {
     return <>
         <div className="sticky top-0 w-full">
-            <Navbar className="border-b border-gray-500" />
+            <Navbar {...props} className="border-b border-gray-500" />
         </div>
         <div className="text-center mt-4">
             <h1 className="text-4xl font-medium mb-2">Blog Saya</h1>
