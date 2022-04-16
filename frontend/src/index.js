@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom'
 import Router from './config/router'
 import { BrowserRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
+import Navbar from './components/Navbar'
 
 ReactDOM.render(
   <BrowserRouter>
+    <div className="sticky top-0 w-full">
+        <Navbar className="border-b border-gray-500" />
+    </div>
     <Router />
   </BrowserRouter>,
   document.getElementById('root')

@@ -1,11 +1,6 @@
-import Navbar from '../components/Navbar'
-
-function Penulis(props)
+function Penulis()
 {
-    return <>
-        <div className="sticky top-0 w-full">
-            <Navbar {...props} className="border-b border-gray-500" />
-        </div>
+    return (
         <div className="px-4 mt-4">
             <h2 className="text-4xl font-medium mb-3">Penulis</h2>
             <div className="flex flex-wrap md:flex-row flex-col rounded w-full content-center md:items-stretch items-center">
@@ -18,7 +13,7 @@ function Penulis(props)
                 </div>
             </div>
         </div>
-    </>
+    )
 }
 
 export default Penulis
