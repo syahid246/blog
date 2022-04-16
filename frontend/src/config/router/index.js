@@ -29,7 +29,7 @@ function Routing()
     return (
         <Switch>
             {routes.map((route, i) => 
-                <FancyRoute key={i} {...route}/>
+                <FancyRoute key={i} {...route} />
             )}
         </Switch>
     )

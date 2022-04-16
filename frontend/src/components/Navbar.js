@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Navbar(props) {
     const [showNavMenu, setShowNavMenu] = useState(false)
@@ -7,6 +7,7 @@ function Navbar(props) {
         {
             path: '/',
             text: 'Home',
+            exact: true
         },
         {
             path: '/kategori',
@@ -17,6 +18,8 @@ function Navbar(props) {
             text: 'Penulis',
         },
     ];
+    const className = 'block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+    const activeClassName = 'block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white'
     return (
         <nav className={`bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800 ${props.className ?? ''}`}>
             <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -39,12 +42,8 @@ function Navbar(props) {
                 <div className={`${showNavMenu ? '' : 'hidden'} justify-between items-center w-full md:flex md:w-auto md:order-1`} id="mobile-menu-3">
                     <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:font-medium">
                         { navLinks.map((link, i) => {
-                            let className = 'block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-                            if ( props.location.pathname === link.path ) {
-                                className = 'block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white'
-                            }
                             return (
-                                <li key={`navbar-link-${i}`}><Link to={{ pathname: link.path, state: { showNavMenu } }} className={className}>{ link.text }</Link></li>
+                                <li key={`navbar-link-${i}`}><NavLink to={link.path} className={isActive => (isActive ? activeClassName : className)} { ...(link.exact && {exact:true}) }>{ link.text }</NavLink></li>
                             )
                         }) }
                     </ul>
