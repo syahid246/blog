@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Review Monitor 5430",
+        "description": "Halo teman-teman semua, di kesempatan kali ini saya akan mencoba mereview Monitor 5430, yang menurut saya mungkin cocok untuk para programmer."
+    },
+    {
+        "id": 2,
+        "title": "Ngopi di Pagi Hari",
+        "description": "Sungguh menyenangkan ngopi di pagi hari karena kita butuh yang hangat-hangat pada pagi hari. Ngopi sambil nunggu maghrib :) 🤨"
+    },
+    {
+        "id": 3,
+        "title": "Memutar Musik saat Ngoding",
+        "description": "Mungkin ada yang bilang mendengarkan musik saat ngoding akan membuat kita tidak fokus, meskipun begitu, itu juga tergantung dengan orangnya."
+    },
+    {
+        "id": 4,
+        "title": "Setup Room ke-167",
+        "description": "Kali ini kita akan kembali menunjukkan setup room dari para subscriber 😁. Kali ini setup room dari 5 orang yaitu Aldi, Bejo, Casandra, Jamal, dan Dodo."
+    },
+    {
+        "id": 5,
+        "title": "Mereview Codingan Buku DukuMedia",
+        "description": "Belakangan ini, Buku DukuMedia menjadi buku yang populer dikalangan para programmer, mari kita melihat, mereview dan mempraktekkan isi dari buku-buku DukuMedia."
+    },
+    {
+        "id": 6,
+        "title": "Studi Kasus NodeJS : CRUD User",
+        "description": "Ini adalah lanjutan dari Materi Dasar NodeJS, dan kali ini kita akan masuk ke Studi Kasus CRUD (Tambah, Baca, Ubah, Hapus) User."
+    }
+]

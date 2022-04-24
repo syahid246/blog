@@ -1,4 +1,5 @@
 import Card from "../components/Card"
+import posts from '../data/posts.json'
 
 function Home()
 {
@@ -9,12 +10,9 @@ function Home()
         </div>
         <div className="container py-4">
             <div className="flex flex-wrap">
-                <Card img="https://source.unsplash.com/360x200?programming" title="Tips Belajar Programming" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?" link="/" />
-                <Card img="https://source.unsplash.com/360x200?programming" title="Tips Belajar Programming" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?" link="/" />
-                <Card img="https://source.unsplash.com/360x200?programming" title="Tips Belajar Programming" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?" link="/" />
-                <Card img="https://source.unsplash.com/360x200?programming" title="Tips Belajar Programming" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?" link="/" />
-                <Card img="https://source.unsplash.com/360x200?programming" title="Tips Belajar Programming" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?" link="/" />
-                <Card img="https://source.unsplash.com/360x200?programming" title="Tips Belajar Programming" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia beatae quisquam?" link="/" />
+                { posts.map(({ id, title, description }) => (
+                    <Card img={require(`../assets/img/blog/posts/${id}.jpg`)} key={`blog-posts-${id}`} title={title} description={description} link={`/posts/${id}`} />
+                )) }
             </div>
         </div>
     </>
