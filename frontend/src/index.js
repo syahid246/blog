@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals'
 import Navbar from './components/Navbar'
 
 ReactDOM.render(
-  <BrowserRouter>
-    <div className="sticky top-0 w-full">
-        <Navbar className="border-b border-gray-500" />
-    </div>
-    <Router />
-  </BrowserRouter>,
+    <React.StrictMode>
+        <BrowserRouter>
+            <div className="sticky top-0 w-full">
+                <Navbar className="border-b border-gray-500" />
+            </div>
+            <Router />
+        </BrowserRouter>
+    </React.StrictMode>,
   document.getElementById('root')
 )
 
